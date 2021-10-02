@@ -1,0 +1,31 @@
+1) cardWrapper and postCard
+2) userCardWrapper
+
+- many time it happens that we will have some diffrent components but they have some some html and logic in common
+
+- ex we want to show slick bar which can comatin catagory cards slick, products cards slick, blogs card slick in all this components html and logic for slick will be the same only cards which we show in slick will be diffrent
+
+- we can make all those components sapratly and all component will have same html and logics code for slick but in all places the html and logic for slick will be same and requndend also what if we want to add same funcnality for other type of cards every time we have to repeat same code that's not good idea na if we want to change somthing in slick we have to change it in all components 
+
+- the good solution will be we create a wrapper component which will just conatin html logic and style for just slick and we can pass diffrent html for showing diffrent type of cards like
+
+<slickWrapper>
+    html for product cards
+</slickWrapper>
+<slickWrapper>
+    html for catagory cards
+</slickWrapper>
+<slickWrapper>
+    html for blogs cards
+</slickWrapper>
+
+- this way we can centrlize our code and can use it in diffrent senarios
+
+- for this kind of situations we have slots in vue
+
+- slosts help us to create such wrpper functions which have some common funcnality and also allow to render diffrent html in it
+
+- we can use <slot> </slot> tag in wrapper component and when we use that component and provide html in it that will be show in place of slot tag inside wrapper component
+
+
+- keep in mind for example we gave header tag as slot html inside wrapperComponent in abc component and we apply style to header tah in abc component and if it's scoped style it won't apply because by rule scoped style should only apply to that component onlt and wrapperComponent and html inside is in abc component but still not a part of that component so it will not provide style to it  if we define it in abc component we have to provide style to it in wrapperComponent because at the end all html we define wrapperComponent in abc will be send to wrapperComponent so header is also part of wrapperComponent so style of it will only affect in wrapperComponent.   

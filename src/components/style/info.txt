@@ -1,0 +1,11 @@
+- when we define style tag and provide style to component that not mine that the style we define in the component will only apply to that component
+
+- all styles which we define in style tag in component by defauly add as global style so like that there will be big chance that our styles in other components can also overwride by some other style whech we define in other component in our app and it will be big pain to find that component and taht style
+
+- so as general rule styles which we define in style tag of component should only affect to that component not affect to other component
+
+- to achive that we use scoped tag in every style tag we define in every component of app by this the style we define in our component will only apply to taht specific component only not even to child components
+
+- and by thumb rule we only define component specific styles in component's style tag other common and global styles stay in app.vue or mostly in main.scss file to avoid redundend styles
+
+- to achive scoped style vue in behind the seen add unique id to our component's main element and same in to selector of that element in css selectors so all selectors and elements will stay diffrent. 

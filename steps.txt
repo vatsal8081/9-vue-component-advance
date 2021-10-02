@@ -1,0 +1,4 @@
+1) component-reg folder
+2) style folder
+3) slots folder
+4) dynamic componenty section in app.vue and eeni niche ni comments

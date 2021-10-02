@@ -1,0 +1,17 @@
+- ther are mainly 2 way to register a component in a vue app 1) gloabl 2) loacl registration
+
+- in we was doing just global registration till now which was to register a component in main.js as component of app by app.component 
+
+- but the problem is when we register a component as a component of app vue alwase haev to load all those components in initail load so when we register all our app's components like that initail loab will incress and also ther is no need to register components which we use once in our app as global 
+
+- insted of we that we only register the component as global when we want to reuse taht component in multiple parts of our app and want to use many times.
+
+- other wise we just import that component in the component where we want to use it and register it in component property of that component specific configration
+
+- when we register the component loacly that component will be only accessabel in component where we register it not even childs of the component can use it this decress initial load and bundel size.
+
+- when want to use component in multiple parts of app register it globally otherwise localy.
+
+- there are multiple wayse to give mame to registerd components 
+1) kabab case = hello-component
+2) 
